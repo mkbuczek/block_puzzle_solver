@@ -1,0 +1,22 @@
+body{
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 90%);
+}
+h{
+    font-size: 3em;
+}
+#solveBtn{
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    padding: 15px;
+    margin: 50px;
+    border-radius: 25px;
+}
+#solveBtn:hover{
+    cursor: pointer;
+    background-color: gray;
+}
