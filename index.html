@@ -7,8 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h>Block Puzzle Solver</h>
-    <div id="solveBtn">Solve</div>
+
+    <div id="mainContainer">
+        <div id="pageTitle">Block Puzzle Solver</div>
+        <div id="rowColContainer">
+            <label for="rows">Rows:</label>
+            <input type="number" id="rows" min="1" max="20" value="5">
+            <label for="cols">Columns:</label>
+            <input type="number" id="cols" min="1" max="20" value="5">
+        </div>
+
+        <div id="gridsBox">
+            <div class="gridTitle">Input Grid</div>
+            <div id="gridContainer"></div>
+        </div>
+
+        <div id="solutionGridContainer" style="display: none">
+        </div>
+        <div id="solveBtn">Solve</div>
+    </div>
+
+    <div id="shapesContainer">
+        <div id="createShapeContainer">
+            <div id="addShapeTitle">Add a Shape</div>
+            <div id="editShapeGrid"></div>
+
+            <div id="shapeCountContainer">
+                <label for="editShapeCount" style="display: inline-block">Count:</label>
+                <input type="number" id="editShapeCount" min="1" max="50" value="1">
+            </div>
+
+            <div id="shapeBtnContainer">
+                <div id="addShapeBtn" onclick="addShape()">Add</div>
+                <div id="clearShapeBtn" onclick="clearShapes()">Clear</div>
+            </div>
+        </div>
+
+        <div id="shapeListTitle">Shapes:</div>
+        <div id="shapeList"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

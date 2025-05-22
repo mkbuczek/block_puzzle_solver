@@ -1,22 +1,223 @@
 body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     user-select: none;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 90%);
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+#mainContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(0, 0%, 90%);
+    justify-content: flex-start;
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding-bottom: 15px;
 }
-h{
-    font-size: 3em;
+#shapesContainer{
+    background-color: paleturquoise;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 1px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+#createShapeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+#addShapeTitle{
+    font-size: 1.5em;
+}
+#editShapeGrid{
+    background-color: black;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 30px);
+}
+#addShapeBtn{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25em;
+    width: fit-content;
+    height: 15px;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+#addShapeBtn:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+#clearShapeBtn{
+    background-color: maroon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25em;
+    width: fit-content;
+    height: 15px;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+#clearShapeBtn:hover{
+    cursor: pointer;
+    background-color: rgb(170, 0, 0);
+}
+#shapeBtnContainer{
+    display: flex;
+}
+#shapeListTitle{
+    margin: 5px auto;
+    font-size: 1.5em;
+}
+.shape{
+    position: relative;
+    margin: 0px;
+}
+.shapeCountText{
+    margin-bottom: 5px;
+}
+.deleteBtn{
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 3px;
+}
+.deleteBtn:hover{
+    cursor: pointer;
+    background-color: rgb(170, 0, 0);
+}
+.shapeWrapperContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#shapeList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#rows, #cols, #editShapeCount{
+    width: 30px;
+    height: 20px;
+}
+#rowColContainer{
+    background-color: gray;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 5px;
+}
+#pageTitle{
+    font-size: 2.5em;
+    margin: 5px;
 }
 #solveBtn{
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
+    width: 100px;
+    height: 25px;
+    text-align: center;
     padding: 15px;
-    margin: 50px;
+    margin-bottom: 5px;
     border-radius: 25px;
 }
 #solveBtn:hover{
     cursor: pointer;
     background-color: gray;
+}
+#gridContainer{
+    display: grid;
+}
+.grid-cell{
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border: 1px solid black;
+    box-sizing: border-box
+}
+.grid-cell:hover{
+    filter: brightness(90%);
+}
+.solution-grid-cell{
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border: 1px solid black;
+    box-sizing: border-box
+}
+.solution-grid{
+    display: grid;
+}
+#gridsBox{
+    background-color: hsla(0, 0%, 0%, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+.gridTitle{
+    font-size: 1.25em;
+    margin-bottom: 5px;
+}
+.solution-wrapper{
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:
+}
+#solutionGridContainer{
+    background-color: hsla(0, 0%, 0%, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+#rotationToggleBtn {
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: #ff6666;
+  border: 2px solid hsl(0, 0%, 27%);
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;
 }
